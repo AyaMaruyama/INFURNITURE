@@ -42,7 +42,7 @@ a {
     cursor: pointer;
 }
 
-a:hover:not(.img-container a, .logo-container a, .shopping-cart a, .inShoppingCart) {
+a:hover:not(.img-container a, .logo-container a, .shopping-cart a, .inShoppingCart, .about-furniture-container a) {
     background-size: 100% 2px;
 }
 
@@ -193,9 +193,52 @@ h2 {
     transform: scale(1.05);
 }
 
+.actions-on-hover {
+    height: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.actions-on-hover.active {
+    display: unset;
+    height: 100%;
+    opacity: 1;
+    transform: translateY(0);
+    transition: ease-in 0.1s;
+}
+
+.about-furniture {
+    width: 60%;
+    height: 45px;
+    /* margin: 20px auto;
+    justify-content: center;
+    align-items: center; */
+    font-family: 'Inter';
+    font-size: 22px;
+    border-radius: 50px;
+    border: 0px solid rgb(211, 194, 161);
+    background-color: rgb(255, 234, 214);
+    box-shadow: 0 0 10px 1px rgb(219, 206, 168);
+    transition: ease all .3s;
+}
+.about-furniture:hover {
+    background-color: rgb(255, 204, 157);
+    box-shadow: 0 0 35px 1px rgb(196, 186, 157);
+}
+
 .shopping-cart-container {
     height: 0;
     opacity: 0;
+    /* display: flex; */
+}
+
+.shopping-cart-container.active {
+    display: unset;
+    height: 100%;
+    opacity: 1;
+    transform: translateY(0);
+    transition: ease-in 0.1s;
 }
 
 .inShoppingCart {
@@ -206,21 +249,12 @@ h2 {
     
     font-family: 'Inter';
     font-size: 22px;
-    /* border-radius: 50px; */
-    /* border: 0px solid rgb(211, 194, 161); */
-    /* background-color: rgb(255, 234, 214); */
-    /* box-shadow: 0 0 10px 1px rgb(219, 206, 168); */
     transition: ease all .3s;
 }
 
 .inShoppingCart img {
     width: 80px;
     height: 80px;
-}
-
-.inShoppingCart:hover {
-    /* background-color: rgb(255, 204, 157); */
-    /* box-shadow: 0 0 35px 1px rgb(153, 141, 108); */
 }
 
 .alert {
@@ -254,10 +288,3 @@ h2 {
     opacity: 1;
 }
 
-.shopping-cart-container.active {
-    display: unset;
-    height: 100%;
-    opacity: 1;
-    transform: translateY(0);
-    transition: ease-in 0.1s;
-}
